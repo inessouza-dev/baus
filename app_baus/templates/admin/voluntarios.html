@@ -1,0 +1,12 @@
+<div class="container">
+
+    {% for voluntario in voluntarios %}
+    <p>{{voluntario.id}}</p>
+    <p>{{voluntario.nome}}</p>
+    <p>{{voluntario.telefone}}</p>
+    <p>{{voluntario.email}}</p>
+    <p>{{voluntario.observacoes}}</p>
+    <hr>
+    {% endfor %}
+
+</div>
