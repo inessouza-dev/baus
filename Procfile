@@ -1,1 +1,1 @@
-web: gunicorn projeto_baus.wsgi --log-file -
+gunicorn projeto_baus:app
