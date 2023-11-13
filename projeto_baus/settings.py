@@ -26,7 +26,12 @@ SECRET_KEY = 'django-insecure-%h20x&+tm*y*n-+7vn$idyy_56*3t04=0_!t*+12=d06ts$p$-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
+
+CSRF_TRUSTED_ORIGINS = [
+    'http://localhost:8000',
+    'https://baus.onrender.com'
+]
 
 
 # Application definition
@@ -78,14 +83,15 @@ WSGI_APPLICATION = 'projeto_baus.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'baus',
-        'USER': 'root',
-        'PASSWORD': '123456',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.mysql',  # Mude o backend para MySQL
+        'NAME': 'mydatabase',  # Nome do seu banco de dados MySQL
+        'USER': 'myuser',      # Seu usuário do MySQL
+        'PASSWORD': 'mypassword',  # Sua senha do MySQL
+        'HOST': 'localhost',   # Ou o endereço do seu banco de dados se não estiver local
+        'PORT': '3306',        # A porta do MySQL
     }
 }
+
 
 
 # Password validation
@@ -122,9 +128,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static')
-]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATICFILES_STORAGE="whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
