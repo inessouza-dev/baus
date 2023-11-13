@@ -84,11 +84,11 @@ WSGI_APPLICATION = 'projeto_baus.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',  # Mude o backend para MySQL
-        'NAME': 'mydatabase',  # Nome do seu banco de dados MySQL
-        'USER': 'myuser',      # Seu usuário do MySQL
-        'PASSWORD': 'mypassword',  # Sua senha do MySQL
-        'HOST': 'localhost',   # Ou o endereço do seu banco de dados se não estiver local
-        'PORT': '3306',        # A porta do MySQL
+        'NAME': 'railway',  # Nome do seu banco de dados MySQL
+        'USER': 'root',      # Seu usuário do MySQL
+        'PASSWORD': 'EhAD6f4GGh-da4fFeFCabEBcAB52fc2B',  # Sua senha do MySQL
+        'HOST': 'monorail.proxy.rlwy.net',   # Ou o endereço do seu banco de dados se não estiver local
+        'PORT': '43599',        # A porta do MySQL
     }
 }
 
